@@ -1,0 +1,22 @@
+<div class="w-full">
+  <button class="px-4 py-2 bg-blue-700 rounded text-white mb-2">Add Recipe</button>
+  <hr />
+<div class="w-full mt-3">
+    <a class="" href="#" *ngFor="let recipe of recipes; let i = index">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      <img
+        class="w-full h-[16rem] object-cover"
+        [src]="recipe.imagePath"
+        alt="Sunset in the mountains"
+      />
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{{ recipe.name }}</div>
+        <p class="text-gray-700 text-base">
+          {{ recipe.description }}
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+  <app-recipe-item></app-recipe-item>
+</div>
