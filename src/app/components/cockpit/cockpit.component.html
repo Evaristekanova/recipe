@@ -1,0 +1,28 @@
+<div class="w-full mb-4">
+  <label class="mb-2 block" for="server">Server Name </label>
+  <input
+    [(ngModel)]="server"
+    class="border-2 w-full py-2 px-2 rounded-lg outline-none focus:ring-2 focus:ring-blue-800"
+    placeholder="Enter Server Name"
+    type="email"
+    name=""
+    id="server"
+  />
+</div>
+<div class="w-full mb-4">
+  <label class="mb-2 block" for="content">Server Content </label>
+  <textarea
+    [(ngModel)]="content"
+    class="border-2 w-full py-2 px-2 rounded-lg outline-none focus:ring-2 focus:ring-blue-800"
+    placeholder="Enter Server Name"
+    type="email"
+    name=""
+    id="content"
+  ></textarea>
+  <button
+    class="bg-blue-800 text-white px-4 py-2 rounded-lg"
+    (click)="serverToBeCreated()"
+  >
+    Create
+  </button>
+</div>

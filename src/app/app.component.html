@@ -1,6 +1,13 @@
-<app-header></app-header>
-<hr>
-<div class="w-full p-4">
-  <app-recipes></app-recipes>
-  <app-shopping-list></app-shopping-list>
+<div class="flex justify-center mt-16">
+  <div class="w-[50%] flex flex-col gap-10">
+    <div class="w-full">
+      <app-cockpit (serverCreated)="onServerCreated($event)"></app-cockpit>
+    </div>
+    <div class="w-full">
+      <app-server-element
+        *ngFor="let element of serverElement"
+        [element]="element"
+      ></app-server-element>
+    </div>
+  </div>
 </div>
